@@ -24,9 +24,27 @@ body {
   }
 
   .hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     margin-top: 20vh;
-    padding: 0 2rem;
+    padding: 2rem;
+  }
+
+  .scroll-down {
+    margin-top: 2rem;
+    font-size: 2rem;
+    color: #64ffda;
+    text-decoration: none;
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
   }
   
   .intro {
@@ -46,6 +64,28 @@ body {
     font-weight: 300;
     font-size: 1.5rem;
     margin-top: 0.5rem;
+  }
+
+  /* About Section */
+.about {
+    padding: 4rem 2rem;
+    background-color: #112240; /* contrast background */
+    color: #ccd6f6;
+  }
+  
+  .about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about p {
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  html {
+    scroll-behavior: smooth;
   }
   
   
