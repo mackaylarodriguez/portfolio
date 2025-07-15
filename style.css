@@ -118,6 +118,15 @@ body {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
 }
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #0a192f;
+  z-index: -1; /* Push behind all content */
+  top: 0;
+  left: 0;
+}
 
   
   

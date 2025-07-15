@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <div id="particles-js"></div>
   <header>
   <nav class="nav">
     <ul>
@@ -48,5 +49,30 @@
   </section>
 
   <script src="script.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
+<script>
+  tsParticles.load("particles-js", {
+    fullScreen: { enable: false },
+    particles: {
+      number: { value: 75 },
+      size: { value: 2 },
+      move: { enable: true, speed: 1 },
+      color: { value: "#64ffda" },
+      links: {
+        enable: true,
+        distance: 100,
+        color: "#64ffda",
+        opacity: 0.4,
+        width: 1
+      }
+    },
+    interactivity: {
+      events: { onhover: { enable: true, mode: "repulse" } }
+    },
+    background: { color: "#0a192f" }
+  });
+</script>
+
 </body>
 </html>
