@@ -22,4 +22,30 @@ body {
   section {
     padding: 2rem;
   }
+
+  .hero {
+    text-align: center;
+    margin-top: 20vh;
+    padding: 0 2rem;
+  }
+  
+  .intro {
+    color: #64ffda; /* accent color */
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .name {
+    color: #dbe5f1;
+    font-size: 3rem;
+    margin: 0;
+  }
+  
+  .subtitle {
+    color: #ccd6f6;
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+  }
+  
   
