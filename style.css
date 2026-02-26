@@ -196,9 +196,8 @@ body > *:not(#particles-js) {
 
 .badge-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-  margin-top: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
 }
 
 .badge {
@@ -228,4 +227,85 @@ body > *:not(#particles-js) {
 .badge span {
   font-size: 0.95rem;
   line-height: 1.2;
+}
+
+/* ===== HERO TWO-COLUMN LAYOUT ===== */
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.hero-art {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-text {
+  text-align: left;
+}
+
+/* ===== Botanical Hover Art ===== */
+.botanical-wrap {
+  display: grid;
+  place-items: center;
+  gap: 0.75rem;
+}
+
+.botanical {
+  width: min(360px, 85vw);
+  height: auto;
+  filter: drop-shadow(0 14px 30px rgba(0,0,0,0.35));
+}
+
+.botanical-caption {
+  color: #a8b2d1;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Idle gentle sway */
+.stem {
+  transform-origin: 150px 280px;
+  animation: stemSway 4.5s ease-in-out infinite;
+}
+
+.leaf-left, .leaf-right {
+  transform-origin: 150px 200px;
+  animation: leafSway 5.2s ease-in-out infinite;
+}
+
+.bloom, .petals, .petal, .center {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 320ms ease, opacity 320ms ease;
+}
+
+/* Hover bloom */
+.botanical-wrap:hover .petals {
+  transform: rotate(8deg) scale(1.06);
+}
+
+.botanical-wrap:hover .center {
+  transform: scale(1.08);
+}
+
+@keyframes stemSway {
+  0%, 100% { transform: rotate(-1.2deg); }
+  50% { transform: rotate(1.6deg); }
+}
+
+@keyframes leafSway {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(1.8deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stem, .leaf-left, .leaf-right { animation: none; }
+  .bloom, .petals, .petal, .center { transition: none; }
 }

@@ -21,9 +21,54 @@
 </header>
 
   <section class="hero" id="hero">
-    <div class="code-art">
-      <span class="bracket">&lt;/&gt;</span>
-    </div>
+    <div class="hero-layout">
+
+    <!-- LEFT: Flower -->
+      <div class="hero-art">
+        <svg class="botanical" viewBox="0 0 300 300" role="img" aria-label="Animated flower">
+  <!-- Stem -->
+  <path class="stem" d="M150 280 C150 230, 145 210, 150 180 C155 150, 160 130, 150 110"
+        fill="none" stroke="rgba(100,255,218,0.7)" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Leaves -->
+  <path class="leaf leaf-left" d="M150 210 C120 200, 105 180, 112 160 C130 165, 145 180, 150 210 Z"
+        fill="rgba(100,255,218,0.18)" stroke="rgba(100,255,218,0.35)" stroke-width="2"/>
+  <path class="leaf leaf-right" d="M150 190 C180 180, 198 160, 192 140 C172 145, 158 160, 150 190 Z"
+        fill="rgba(100,255,218,0.18)" stroke="rgba(100,255,218,0.35)" stroke-width="2"/>
+
+  <!-- Flower -->
+  <g class="bloom" transform="translate(150 100)">
+    <g class="petals">
+      <ellipse class="petal" rx="16" ry="40" transform="rotate(0) translate(0,-48)"
+               fill="rgba(100,255,218,0.22)" stroke="rgba(100,255,218,0.55)" stroke-width="2"/>
+      <ellipse class="petal" rx="16" ry="40" transform="rotate(45) translate(0,-48)"
+               fill="rgba(100,255,218,0.18)" stroke="rgba(100,255,218,0.5)" stroke-width="2"/>
+      <ellipse class="petal" rx="16" ry="40" transform="rotate(90) translate(0,-48)"
+               fill="rgba(100,255,218,0.22)" stroke="rgba(100,255,218,0.55)" stroke-width="2"/>
+      <ellipse class="petal" rx="16" ry="40" transform="rotate(135) translate(0,-48)"
+               fill="rgba(100,255,218,0.18)" stroke="rgba(100,255,218,0.5)" stroke-width="2"/>
+      <ellipse class="petal" rx="16" ry="40" transform="rotate(180) translate(0,-48)"
+               fill="rgba(100,255,218,0.22)" stroke="rgba(100,255,218,0.55)" stroke-width="2"/>
+      <ellipse class="petal" rx="16" ry="40" transform="rotate(225) translate(0,-48)"
+               fill="rgba(100,255,218,0.18)" stroke="rgba(100,255,218,0.5)" stroke-width="2"/>
+      <ellipse class="petal" rx="16" ry="40" transform="rotate(270) translate(0,-48)"
+               fill="rgba(100,255,218,0.22)" stroke="rgba(100,255,218,0.55)" stroke-width="2"/>
+      <ellipse class="petal" rx="16" ry="40" transform="rotate(315) translate(0,-48)"
+               fill="rgba(100,255,218,0.18)" stroke="rgba(100,255,218,0.5)" stroke-width="2"/>
+    </g>
+
+    <circle class="center" r="14" fill="rgba(204,214,246,0.85)" stroke="rgba(100,255,218,0.6)" stroke-width="2"/>
+    <circle class="center-dot" r="4" fill="rgba(100,255,218,0.9)"/>
+  </g>
+</svg>
+      </div>
+
+      <div class="hero-text">
+        <div class="code-art">
+          <span class="bracket">&lt;/&gt;</span>
+        </div>
+
+      <!-- RIGHT: Name -->
 
     <p class="intro">Hi, my name is</p>
     <h1 class="name">Mackayla Rodriguez</h1>
@@ -31,10 +76,11 @@
 
     <div class="hero-buttons">
       <a href="resume.pdf" class="btn">View Resume</a>
-      <a href="https://github.com/mackaylarodriguez" class="btn">GitHub</a>
-      <a href="https://www.linkedin.com/in/mackayla-rodriguez-150a9937a" class="btn">LinkedIn</a>
+      <a href="https://github.com/mackaylarodriguez" class="btn" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/mackayla-rodriguez-150a9937a" class="btn" target="_blank">LinkedIn</a>
     </div>
-
+    </div>
+    </div>
     <a href="#about" class="scroll-down">↓</a>
   </section>  
 
