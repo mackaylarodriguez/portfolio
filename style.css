@@ -136,11 +136,11 @@ html {
   top: 0;
   left: 0;
 }
-#about, #experience, #projects #badges{
+#about, #experience, #projects, #badges{
   min-height: 60vh;
   display: flex;
   align-items: center;
-  padding: 5rem, 5vw;
+  padding: 5rem 5vw;
   box-sizing: border-box;
 }
 
