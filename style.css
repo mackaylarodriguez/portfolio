@@ -136,7 +136,7 @@ html {
   top: 0;
   left: 0;
 }
-#about, #experience, #projects {
+#about, #experience, #projects #badges{
   min-height: 60vh;
   display: flex;
   align-items: center;
@@ -172,4 +172,54 @@ body > *:not(#particles-js) {
 .btn:hover {
   background: rgba(100, 255, 218, 0.1);
   transform: translateY(-2px);
+}
+
+#badges {
+  background-color: rgba(17, 34, 64, 0.35);
+  border-top: 1px solid rgba(100, 255, 218, 0.15);
+}
+
+.muted {
+  color: #a8b2d1;
+  margin-top: 0.5rem;
+  margin-bottom: 1.75rem;
+}
+
+#badges a {
+  color: #64ffda;
+  text-decoration: none;
+}
+
+#badges a:hover {
+  text-decoration: underline;
+}
+
+.badge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  background: rgba(10, 25, 47, 0.6);
+  border: 1px solid rgba(100, 255, 218, 0.2);
+  color: #ccd6f6;
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.badge:hover {
+  transform: translateY(-3px);
+  border-color: rgba(100, 255, 218, 0.6);
+}
+
+.badge img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
 }
