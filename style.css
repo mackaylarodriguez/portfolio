@@ -198,6 +198,7 @@ body > *:not(#particles-js) {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
+  margin-top: 1.5rem;
 }
 
 .badge {
@@ -210,7 +211,6 @@ body > *:not(#particles-js) {
   border: 1px solid rgba(100, 255, 218, 0.2);
   color: #ccd6f6;
   text-decoration: none;
-  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .badge:hover {
@@ -219,7 +219,13 @@ body > *:not(#particles-js) {
 }
 
 .badge img {
-  width: 42px;
-  height: 42px;
+  width: 48px;
+  height: 48px;
   object-fit: contain;
+  flex: 0 0 48px;
+}
+
+.badge span {
+  font-size: 0.95rem;
+  line-height: 1.2;
 }
