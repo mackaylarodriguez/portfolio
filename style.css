@@ -415,3 +415,30 @@ body > *:not(#particles-js) {
     width: min(160px, 45vw);
   }
 }
+
+/* education */
+#education {
+  padding: 4rem 5vw;
+}
+
+.education-layer {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.education-text h2 {
+  font-size: 2rem;
+  margin-block: 1.5rem;
+}
+
+.education-text h3 {
+  font-size: 1.2rem;
+  color: #dbe5f1;
+  margin-bottom: 0.3rem;
+}
+
+.degree {
+  color: #a8b2d1;
+  margin-bottom: 1.5rem;
+}
+
