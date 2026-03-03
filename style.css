@@ -107,8 +107,7 @@ html {
   }
   
   .about p {
-    max-width: 600px;
-    margin: 0 auto;
+    margin: 0;
     line-height: 1.6;
   }
   
@@ -136,7 +135,7 @@ html {
   top: 0;
   left: 0;
 }
-#about, #experience, #projects, #badges{
+#experience, #projects, #badges{
   min-height: 60vh;
   display: flex;
   align-items: center;
@@ -316,4 +315,50 @@ body > *:not(#particles-js) {
   text-decoration: none;
   border-bottom: 1px solid rgba(100, 255, 218, 0.4);
   transition: color 0.2 ease, border-color 0.2s ease;
+}
+
+/* ===== About layout (text left, photo right) ===== */
+#about {
+  display: block;
+  padding: 5rem 5vw; /* keeps spacing consistent */
+}
+
+.about-layer {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-text {
+  text-align: left;
+}
+
+.about-photo {
+  display: flex;
+  justify-content: center;
+}
+
+.about-photo img {
+  width: 280px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  border: 2px solid rgba(100, 255, 218, 0.3);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .about-layer {
+    grid-template-columns: 1fr;
+  }
+  .about-text {
+    text-align: center;
+  }
+  .about-photo {
+    order: -1;
+  }
 }
