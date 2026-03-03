@@ -442,3 +442,18 @@ body > *:not(#particles-js) {
   margin-bottom: 1.5rem;
 }
 
+.section-title {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  color: #ccd6f6;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.section-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(100, 255, 218, 0.3);
+}
