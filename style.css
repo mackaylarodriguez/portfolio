@@ -364,6 +364,11 @@ body > *:not(#particles-js) {
   }
 }
 
+.education-layer {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
 @media (max-width: 768px) {
   .hero {
     height: auto;          /* don’t force 100vh on small screens */
