@@ -369,6 +369,21 @@ body > *:not(#particles-js) {
   margin: 0 auto;
 }
 
+.edu-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.edu-skills span {
+  border: 1px solid rgba(100,255,218,0.4);
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: #64ffda;
+}
+
 @media (max-width: 768px) {
   .hero {
     height: auto;          /* don’t force 100vh on small screens */
