@@ -384,6 +384,19 @@ body > *:not(#particles-js) {
   color: #64ffda;
 }
 
+.capstone-card {
+  margin-top: 1.5rem;
+  padding: 1.2rem;
+  border: 1px solid rgba(100,255,218,0.2);
+  border-radius: 10px;
+  background: rgba(17,34,64,0.4);
+}
+
+.capstone-card h4 {
+  color: #64ffda;
+  margin-bottom: 0.6rem;
+}
+
 @media (max-width: 768px) {
   .hero {
     height: auto;          /* don’t force 100vh on small screens */
