@@ -270,7 +270,9 @@ header {
 }
 
 #about {
-  display: block;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
   padding: 5rem 5vw;
 }
 
@@ -306,6 +308,9 @@ header {
    EDUCATION
 ========================= */
 #education {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
   padding: 4rem 5vw;
 }
 
