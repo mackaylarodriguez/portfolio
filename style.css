@@ -378,7 +378,6 @@ body > *:not(#particles-js) {
 }
 
 .education-text {
-  max-width: 650px;
   text-align: left;
 }
 
