@@ -743,8 +743,7 @@ header {
   inset: 0;
   z-index: 0;
   border: 0;
-  background: rgba(4, 12, 24, 0.78);
-  backdrop-filter: blur(8px);
+  background: rgba(3, 10, 20, 0.94);
   cursor: pointer;
 }
 
@@ -755,7 +754,7 @@ header {
   padding: 1.25rem;
   border-radius: 26px;
   border: 1px solid rgba(100, 255, 218, 0.16);
-  background: rgba(10, 25, 47, 0.96);
+  background: #0a192f;
   box-shadow: 0 28px 80px rgba(4, 12, 24, 0.42);
 }
 
@@ -794,7 +793,7 @@ header {
   min-height: 500px;
   border-radius: 22px;
   overflow: hidden;
-  background: rgba(17, 34, 64, 0.56);
+  background: #112240;
 }
 
 .project-gallery-slide {
@@ -1001,37 +1000,6 @@ header {
 /* =========================
    CERTIFICATIONS
 ========================= */
-.cert-feature {
-  display: grid;
-  grid-template-columns: 84px 1fr;
-  gap: 1rem;
-  align-items: center;
-  padding: 0.95rem 1rem;
-  border-radius: 14px;
-  margin-bottom: 1.25rem;
-}
-
-.cert-feature img {
-  width: 100%;
-  max-width: 84px;
-  height: auto;
-  justify-self: center;
-}
-
-.cert-copy h3 {
-  color: #dbe5f1;
-  font-size: 1rem;
-  margin: 0 0 0.25rem;
-}
-
-.cert-copy p {
-  margin: 0.25rem 0;
-}
-
-.cert-copy p:last-child {
-  margin-bottom: 0;
-}
-
 .badge-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -1042,7 +1010,7 @@ header {
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  padding: 0.95rem 1rem;
+  padding: 0.85rem 0.95rem;
   border-radius: 14px;
   color: #ccd6f6;
   text-decoration: none;
