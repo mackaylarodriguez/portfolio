@@ -726,11 +726,11 @@ header {
 }
 
 .project-modal[hidden] {
-  display: none;
+  display: none !important;
 }
 
 .project-modal {
-  position: fixed;
+  position: fixed !important;
   inset: 0;
   z-index: 200;
   display: grid;
