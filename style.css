@@ -140,7 +140,7 @@ header {
 }
 
 .section-shell {
-  max-width: 1100px;
+  max-width: 980px;
   width: 100%;
   margin: 0 auto;
 }
@@ -332,7 +332,7 @@ header {
    ABOUT
 ========================= */
 .about {
-  background-color: transparent;
+  background-color: #0a192f;
   color: #ccd6f6;
   padding: 0;
 }
@@ -341,7 +341,7 @@ header {
   display: flex;
   align-items: center;
   min-height: 80vh;
-  padding: 3.5rem 4vw;
+  padding: 4rem 5vw;
 }
 
 .about-layer {
@@ -349,7 +349,8 @@ header {
   grid-template-columns: 1.2fr 0.8fr;
   align-items: center;
   gap: 2rem;
-  max-width: 1100px;
+  max-width: 980px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -391,7 +392,8 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
-  max-width: 1100px;
+  max-width: 980px;
+  width: 100%;
   margin: 0 auto;
   align-items: start;
 }
@@ -494,7 +496,7 @@ header {
 .timeline {
   border-left: 2px solid rgba(100, 255, 218, 0.28);
   padding-left: 2rem;
-  max-width: 920px;
+  max-width: 100%;
 }
 
 .timeline-item {
@@ -679,24 +681,29 @@ header {
 ========================= */
 .cert-feature {
   display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 1.5rem;
+  grid-template-columns: 84px 1fr;
+  gap: 1rem;
   align-items: center;
-  padding: 1.4rem;
-  border-radius: 18px;
-  margin-bottom: 2rem;
+  padding: 0.95rem 1rem;
+  border-radius: 14px;
+  margin-bottom: 1.25rem;
 }
 
 .cert-feature img {
   width: 100%;
-  max-width: 140px;
+  max-width: 84px;
   height: auto;
   justify-self: center;
 }
 
 .cert-copy h3 {
   color: #dbe5f1;
-  margin: 0 0 0.45rem;
+  font-size: 1rem;
+  margin: 0 0 0.25rem;
+}
+
+.cert-copy p {
+  margin: 0.25rem 0;
 }
 
 .cert-copy p:last-child {
