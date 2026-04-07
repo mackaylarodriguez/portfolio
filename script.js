@@ -16,13 +16,13 @@ const projectData = [
   {
     title: "Team Hub Application",
     summary:
-      "Team-focused application designed to help users stay organized, collaborate more easily, and keep shared project information in one central place.",
-    tech: "Web App | Collaboration | Team Workflow",
+      "Internal trip management dashboard for tracking sites, dates, workers, training progress, and trip tasks across multiple teams.",
+    tech: "Dashboard | Team Operations | Trip Management",
     repo: "https://github.com/mackaylarodriguez",
     slides: [
-      { label: "Team Dashboard", className: "project-media-team" },
+      { label: "Trip Dashboard", className: "project-media-team" },
       { label: "Task Board", className: "project-media-team-alt" },
-      { label: "Shared Workspace", className: "project-media-team-detail" }
+      { label: "Team Tracking", className: "project-media-team-detail" }
     ]
   },
   {
