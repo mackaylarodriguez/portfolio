@@ -556,16 +556,39 @@ header {
 /* =========================
    PROJECTS
 ========================= */
-.project-grid {
+.project-carousel {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.4rem;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(320px, 420px);
+  gap: 1.25rem;
+  overflow-x: auto;
+  padding: 0.25rem 0 1rem;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(100, 255, 218, 0.45) rgba(17, 34, 64, 0.35);
+}
+
+.project-carousel::-webkit-scrollbar {
+  height: 10px;
+}
+
+.project-carousel::-webkit-scrollbar-track {
+  background: rgba(17, 34, 64, 0.35);
+  border-radius: 999px;
+}
+
+.project-carousel::-webkit-scrollbar-thumb {
+  background: rgba(100, 255, 218, 0.4);
+  border-radius: 999px;
 }
 
 .project-card {
+  display: flex;
+  flex-direction: column;
   border-radius: 18px;
   overflow: hidden;
   transition: transform 0.25s ease, border-color 0.25s ease;
+  scroll-snap-align: start;
 }
 
 .project-card:hover {
@@ -574,7 +597,7 @@ header {
 }
 
 .project-media {
-  min-height: 200px;
+  min-height: 240px;
   display: flex;
   align-items: flex-end;
   padding: 1rem;
@@ -651,7 +674,7 @@ header {
 }
 
 .project-body {
-  padding: 1.15rem;
+  padding: 1.2rem 1.2rem 1rem;
 }
 
 .project-meta {
@@ -779,10 +802,6 @@ header {
     grid-template-columns: 1fr;
   }
 
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-
   .hero {
     min-height: auto;
     padding-top: 5rem;
@@ -862,7 +881,11 @@ header {
     left: -1.93rem;
   }
 
+  .project-carousel {
+    grid-auto-columns: minmax(280px, 86vw);
+  }
+
   .project-media {
-    min-height: 170px;
+    min-height: 190px;
   }
 }
