@@ -563,7 +563,7 @@ header {
 ========================= */
 .projects-showcase {
   display: grid;
-  gap: 1.4rem;
+  gap: 1rem;
 }
 
 .featured-project-shell {
@@ -725,89 +725,6 @@ header {
   background: #64ffda;
 }
 
-.project-card-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-}
-
-.project-tile {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 1.2rem;
-  border: 1px solid rgba(100, 255, 218, 0.16);
-  border-radius: 18px;
-  background: rgba(17, 34, 64, 0.56);
-  box-shadow: 0 18px 40px rgba(4, 12, 24, 0.24);
-  color: #ccd6f6;
-  text-align: left;
-  cursor: pointer;
-  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
-}
-
-.project-tile:hover,
-.project-tile.is-active {
-  transform: translateY(-3px);
-  border-color: rgba(100, 255, 218, 0.45);
-  background: rgba(22, 43, 77, 0.72);
-}
-
-.project-tile-top {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.project-tile-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
-  color: #64ffda;
-  border: 1px solid rgba(100, 255, 218, 0.2);
-  background: rgba(100, 255, 218, 0.06);
-  font-size: 1.1rem;
-}
-
-.project-tile-links {
-  display: flex;
-  gap: 0.45rem;
-}
-
-.project-tile-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 999px;
-  border: 1px solid rgba(204, 214, 246, 0.15);
-  color: #dbe5f1;
-  font-size: 0.85rem;
-}
-
-.project-tile h3 {
-  margin: 0;
-  color: #f1f5ff;
-  font-size: 1.1rem;
-  line-height: 1.4;
-}
-
-.project-tile p {
-  margin: 0;
-  color: #a8b2d1;
-  line-height: 1.65;
-}
-
-.project-tile-tech {
-  color: #64ffda;
-  font-size: 0.82rem;
-}
-
 .project-modal[hidden] {
   display: none;
 }
@@ -824,6 +741,7 @@ header {
 .project-modal-backdrop {
   position: absolute;
   inset: 0;
+  z-index: 0;
   border: 0;
   background: rgba(4, 12, 24, 0.78);
   backdrop-filter: blur(8px);
@@ -832,9 +750,9 @@ header {
 
 .project-modal-dialog {
   position: relative;
-  z-index: 1;
-  width: min(980px, calc(100vw - 2rem));
-  padding: 1.5rem;
+  z-index: 2;
+  width: min(920px, calc(100vw - 2rem));
+  padding: 1.25rem;
   border-radius: 26px;
   border: 1px solid rgba(100, 255, 218, 0.16);
   background: rgba(10, 25, 47, 0.96);
@@ -848,8 +766,8 @@ header {
 }
 
 .project-modal-header {
-  max-width: 42rem;
-  margin-bottom: 1rem;
+  max-width: 40rem;
+  margin-bottom: 0.9rem;
 }
 
 .project-modal-header h3 {
@@ -861,7 +779,7 @@ header {
 .project-modal-copy {
   color: #a8b2d1;
   line-height: 1.7;
-  margin: 0.7rem 0 0;
+  margin: 0.55rem 0 0;
 }
 
 .project-modal-stage {
@@ -873,9 +791,10 @@ header {
 
 .project-modal-slides {
   position: relative;
-  min-height: 440px;
+  min-height: 500px;
   border-radius: 22px;
   overflow: hidden;
+  background: rgba(17, 34, 64, 0.56);
 }
 
 .project-gallery-slide {
@@ -1166,7 +1085,6 @@ header {
   .featured-project,
   .featured-project-slide,
   .project-gallery-slide,
-  .project-tile,
   .badge,
   .btn,
   .project-link,
@@ -1213,9 +1131,6 @@ header {
     text-align: center;
   }
 
-  .project-card-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 768px) {
@@ -1308,7 +1223,7 @@ header {
   }
 
   .project-modal-slides {
-    min-height: 280px;
+    min-height: 320px;
   }
 
   .project-modal-header h3 {

@@ -5,8 +5,6 @@ const projectData = [
     title: "Escape Video Game",
     summary:
       "Senior capstone dungeon crawler featuring procedural generation, multiplayer lobby support, and Agile sprint planning in Jira.",
-    tileSummary:
-      "Procedural dungeon crawler built in Unreal Engine 5 with multiplayer lobby support and a collaborative sprint workflow.",
     tech: "C++ | Unreal Engine 5 | Jira",
     repo: "https://github.com/mackaylarodriguez",
     slides: [
@@ -19,8 +17,6 @@ const projectData = [
     title: "Team Hub Application",
     summary:
       "Team-focused application designed to help users stay organized, collaborate more easily, and keep shared project information in one central place.",
-    tileSummary:
-      "Collaboration app for organizing team work, shared updates, and project coordination from one central dashboard.",
     tech: "Web App | Collaboration | Team Workflow",
     repo: "https://github.com/mackaylarodriguez",
     slides: [
@@ -33,8 +29,6 @@ const projectData = [
     title: "Business Solutions Prototypes",
     summary:
       "End-to-end internship projects exploring automation, process improvement, and AI-supported workflows for practical business use cases.",
-    tileSummary:
-      "AI-driven workflow experiments focused on process improvement, automation, and practical business problem-solving.",
     tech: "AI Solutions | Automation | Data Analysis",
     repo: "https://github.com/mackaylarodriguez",
     slides: [
@@ -55,7 +49,6 @@ if (projectsRoot && projectModal) {
   const featuredTech = projectsRoot.querySelector("[data-featured-tech]");
   const featuredGithub = projectsRoot.querySelector("[data-featured-github]");
   const featuredDots = projectsRoot.querySelector("[data-featured-dots]");
-  const projectCardGrid = projectsRoot.querySelector("[data-project-card-grid]");
   const featuredProject = projectsRoot.querySelector("[data-open-gallery]");
   const featuredNavButtons = Array.from(projectsRoot.querySelectorAll("[data-featured-direction]"));
 
@@ -67,7 +60,6 @@ if (projectsRoot && projectModal) {
   const galleryCloseButtons = Array.from(projectModal.querySelectorAll("[data-close-gallery]"));
 
   let currentProjectIndex = 0;
-  let galleryProjectIndex = 0;
   let gallerySlideIndex = 0;
 
   const renderFeaturedProject = () => {
@@ -107,37 +99,8 @@ if (projectsRoot && projectModal) {
     });
   };
 
-  const renderProjectCards = () => {
-    projectCardGrid.innerHTML = projectData
-      .map(
-        (project, index) => `
-          <button class="project-tile${index === currentProjectIndex ? " is-active" : ""}" type="button" data-project-index="${index}">
-            <div class="project-tile-top">
-              <span class="project-tile-icon">&#128193;</span>
-              <div class="project-tile-links" aria-hidden="true">
-                <span class="project-tile-link">GH</span>
-                <span class="project-tile-link">&#8599;</span>
-              </div>
-            </div>
-            <h3>${project.title}</h3>
-            <p>${project.tileSummary}</p>
-            <span class="project-tile-tech">${project.tech}</span>
-          </button>
-        `
-      )
-      .join("");
-
-    projectCardGrid.querySelectorAll("[data-project-index]").forEach((card) => {
-      card.addEventListener("click", () => {
-        const projectIndex = Number(card.dataset.projectIndex);
-        setCurrentProject(projectIndex);
-        openGallery(projectIndex, 0);
-      });
-    });
-  };
-
   const renderGallery = () => {
-    const project = projectData[galleryProjectIndex];
+    const project = projectData[currentProjectIndex];
 
     galleryTitle.textContent = project.title;
     galleryDescription.textContent = project.summary;
@@ -174,15 +137,13 @@ if (projectsRoot && projectModal) {
     currentProjectIndex = (projectIndex + projectData.length) % projectData.length;
     renderFeaturedProject();
     renderFeaturedDots();
-    renderProjectCards();
   };
 
-  const openGallery = (projectIndex, slideIndex) => {
-    galleryProjectIndex = projectIndex;
-    gallerySlideIndex = slideIndex;
+  const openGallery = () => {
+    gallerySlideIndex = 0;
+    renderGallery();
     projectModal.hidden = false;
     document.body.style.overflow = "hidden";
-    renderGallery();
   };
 
   const closeGallery = () => {
@@ -191,7 +152,8 @@ if (projectsRoot && projectModal) {
   };
 
   featuredNavButtons.forEach((button) => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", (event) => {
+      event.stopPropagation();
       const direction = Number(button.dataset.featuredDirection);
       setCurrentProject(currentProjectIndex + direction);
     });
@@ -202,7 +164,7 @@ if (projectsRoot && projectModal) {
       return;
     }
 
-    openGallery(currentProjectIndex, 0);
+    openGallery();
   });
 
   featuredProject.addEventListener("keydown", (event) => {
@@ -211,7 +173,7 @@ if (projectsRoot && projectModal) {
     }
 
     event.preventDefault();
-    openGallery(currentProjectIndex, 0);
+    openGallery();
   });
 
   featuredGithub.addEventListener("click", (event) => {
@@ -219,9 +181,10 @@ if (projectsRoot && projectModal) {
   });
 
   galleryNavButtons.forEach((button) => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", (event) => {
+      event.stopPropagation();
       const direction = Number(button.dataset.galleryDirection);
-      const slideCount = projectData[galleryProjectIndex].slides.length;
+      const slideCount = projectData[currentProjectIndex].slides.length;
 
       gallerySlideIndex = (gallerySlideIndex + direction + slideCount) % slideCount;
       renderGallery();
@@ -230,6 +193,12 @@ if (projectsRoot && projectModal) {
 
   galleryCloseButtons.forEach((button) => {
     button.addEventListener("click", closeGallery);
+  });
+
+  projectModal.addEventListener("click", (event) => {
+    if (event.target === projectModal) {
+      closeGallery();
+    }
   });
 
   document.addEventListener("keydown", (event) => {
@@ -244,14 +213,14 @@ if (projectsRoot && projectModal) {
 
     if (event.key === "ArrowLeft") {
       gallerySlideIndex =
-        (gallerySlideIndex - 1 + projectData[galleryProjectIndex].slides.length) %
-        projectData[galleryProjectIndex].slides.length;
+        (gallerySlideIndex - 1 + projectData[currentProjectIndex].slides.length) %
+        projectData[currentProjectIndex].slides.length;
       renderGallery();
     }
 
     if (event.key === "ArrowRight") {
       gallerySlideIndex =
-        (gallerySlideIndex + 1) % projectData[galleryProjectIndex].slides.length;
+        (gallerySlideIndex + 1) % projectData[currentProjectIndex].slides.length;
       renderGallery();
     }
   });
