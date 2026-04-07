@@ -202,87 +202,48 @@
   <section id="projects">
     <div class="section-shell">
       <h2 class="section-title">/ projects</h2>
-      <div class="project-carousel" data-project-carousel>
-        <article class="project-card">
-          <div class="project-body">
-            <div class="project-meta">C++ | Unreal Engine 5 | Jira</div>
-            <h3>Escape Video Game</h3>
-            <p>Senior capstone dungeon crawler featuring procedural generation, multiplayer lobby support, and Agile sprint planning in Jira.</p>
-            <div class="project-links">
-              <a class="project-link" href="https://github.com/mackaylarodriguez" target="_blank" rel="noopener">View GitHub</a>
-            </div>
-          </div>
-          <div class="project-media" data-slide-show>
-            <button class="slide-arrow slide-arrow-left" type="button" aria-label="Previous project image">&#8592;</button>
-            <div class="project-slides">
-              <div class="project-slide project-media-game is-active">
-                <span>Gameplay Demo</span>
-              </div>
-              <div class="project-slide project-media-game-alt">
-                <span>Lobby Screen</span>
-              </div>
-              <div class="project-slide project-media-game-detail">
-                <span>Dungeon View</span>
+      <div class="projects-showcase" data-projects>
+        <div class="featured-project-shell">
+          <button class="featured-project-nav featured-project-nav-left" type="button" data-featured-direction="-1" aria-label="Show previous project">&#8592;</button>
+          <article class="featured-project" data-open-gallery tabindex="0" role="button" aria-label="Open project gallery">
+            <div class="featured-project-slides" data-featured-slides></div>
+            <div class="featured-project-overlay">
+              <p class="featured-project-label">Highlighted Project</p>
+              <h3 class="featured-project-title" data-featured-title></h3>
+              <p class="featured-project-description" data-featured-description></p>
+              <p class="featured-project-tech" data-featured-tech></p>
+              <div class="featured-project-actions">
+                <a class="project-link" data-featured-github href="https://github.com/mackaylarodriguez" target="_blank" rel="noopener">View GitHub</a>
+                <span class="featured-project-hint">Click the showcase to open the gallery</span>
               </div>
             </div>
-            <button class="slide-arrow slide-arrow-right" type="button" aria-label="Next project image">&#8594;</button>
-          </div>
-        </article>
+          </article>
+          <button class="featured-project-nav featured-project-nav-right" type="button" data-featured-direction="1" aria-label="Show next project">&#8594;</button>
+        </div>
 
-        <article class="project-card">
-          <div class="project-body">
-            <div class="project-meta">Web App | Collaboration | Team Workflow</div>
-            <h3>Team Hub Application</h3>
-            <p>Team-focused application designed to help users stay organized, collaborate more easily, and keep shared project information in one central place.</p>
-            <div class="project-links">
-              <a class="project-link" href="https://github.com/mackaylarodriguez" target="_blank" rel="noopener">View GitHub</a>
-            </div>
-          </div>
-          <div class="project-media" data-slide-show>
-            <button class="slide-arrow slide-arrow-left" type="button" aria-label="Previous project image">&#8592;</button>
-            <div class="project-slides">
-              <div class="project-slide project-media-team is-active">
-                <span>Team Dashboard</span>
-              </div>
-              <div class="project-slide project-media-team-alt">
-                <span>Task Board</span>
-              </div>
-              <div class="project-slide project-media-team-detail">
-                <span>Shared Workspace</span>
-              </div>
-            </div>
-            <button class="slide-arrow slide-arrow-right" type="button" aria-label="Next project image">&#8594;</button>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-body">
-            <div class="project-meta">AI Solutions | Automation | Data Analysis</div>
-            <h3>Business Solutions Prototypes</h3>
-            <p>End-to-end internship projects exploring automation, process improvement, and AI-supported workflows for practical business use cases.</p>
-            <div class="project-links">
-              <a class="project-link" href="https://github.com/mackaylarodriguez" target="_blank" rel="noopener">View GitHub</a>
-            </div>
-          </div>
-          <div class="project-media" data-slide-show>
-            <button class="slide-arrow slide-arrow-left" type="button" aria-label="Previous project image">&#8592;</button>
-            <div class="project-slides">
-              <div class="project-slide project-media-ai is-active">
-                <span>AI Workflow Build</span>
-              </div>
-              <div class="project-slide project-media-ai-alt">
-                <span>Automation Flow</span>
-              </div>
-              <div class="project-slide project-media-ai-detail">
-                <span>Project Output</span>
-              </div>
-            </div>
-            <button class="slide-arrow slide-arrow-right" type="button" aria-label="Next project image">&#8594;</button>
-          </div>
-        </article>
+        <div class="featured-project-dots" data-featured-dots></div>
+        <div class="project-card-grid" data-project-card-grid></div>
       </div>
     </div>
   </section>
+
+  <div class="project-modal" data-project-modal hidden>
+    <button class="project-modal-backdrop" type="button" data-close-gallery aria-label="Close gallery"></button>
+    <div class="project-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="project-gallery-title">
+      <button class="project-modal-close" type="button" data-close-gallery aria-label="Close gallery">&times;</button>
+      <div class="project-modal-header">
+        <p class="eyebrow">Project Gallery</p>
+        <h3 id="project-gallery-title" data-gallery-title></h3>
+        <p class="project-modal-copy" data-gallery-description></p>
+      </div>
+      <div class="project-modal-stage">
+        <button class="project-modal-nav project-modal-nav-left" type="button" data-gallery-direction="-1" aria-label="Previous gallery image">&#8592;</button>
+        <div class="project-modal-slides" data-gallery-slides></div>
+        <button class="project-modal-nav project-modal-nav-right" type="button" data-gallery-direction="1" aria-label="Next gallery image">&#8594;</button>
+      </div>
+      <div class="project-modal-thumbs" data-gallery-thumbs></div>
+    </div>
+  </div>
 
   <section id="badges">
     <div class="section-shell">
