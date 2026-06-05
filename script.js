@@ -7,6 +7,7 @@ const projectData = [
       "A full-stack web application for Let's Start Talking to manage participant applications, records, and workflows.",
     tech: "JavaScript (Next.js, React, Supabase, SQL)",
     repo: "https://github.com/mackaylarodriguez/lst-team-hub",
+    cover: "projects/lst-team-hub/cover.png",
     slides: [
       { label: "My Trips", image: "projects/lst-team-hub/my-trips.png" },
       { label: "Trip Overview", image: "projects/lst-team-hub/trip-overview.png" },
@@ -19,6 +20,7 @@ const projectData = [
       "A full-stack IT help desk app for tracking support tickets with authentication, CRUD operations, and admin dashboards.",
     tech: "C# (ASP.NET Core, SQL Server)",
     repo: "https://github.com/mackaylarodriguez/ITSupportTicketSystem",
+    cover: "projects/it-support/cover.png",
     slides: [
       { label: "Ticket Dashboard", image: "projects/it-support/dashboard.png" },
       { label: "Create Ticket", image: "projects/it-support/create-ticket.png" },
@@ -71,9 +73,12 @@ if (projectsRoot && projectModal) {
 
   const renderFeaturedProject = () => {
     const project = projectData[currentProjectIndex];
-    const coverSlide = project.slides[0];
 
-    featuredSlides.innerHTML = renderSlideMarkup(coverSlide, "featured-project-slide", true);
+    featuredSlides.innerHTML = renderSlideMarkup(
+      { label: project.title, image: project.cover },
+      "featured-project-slide",
+      true
+    );
 
     featuredTitle.textContent = project.title;
     featuredDescription.textContent = project.summary;
