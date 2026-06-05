@@ -805,10 +805,10 @@ header {
   z-index: 200;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   overflow-y: auto;
   overscroll-behavior: contain;
-  padding: 1.5rem 1rem 2rem;
+  padding: 1.25rem;
 }
 
 .project-modal-backdrop {
@@ -823,9 +823,12 @@ header {
 .project-modal-dialog {
   position: relative;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
   width: min(920px, calc(100vw - 2rem));
-  margin: auto 0;
-  padding: 1.25rem 1.25rem 1.5rem;
+  max-height: calc(100dvh - 2.5rem);
+  margin: auto;
+  padding: 1.25rem;
   border-radius: 26px;
   border: 1px solid rgba(100, 255, 218, 0.16);
   background: #0a192f;
@@ -839,6 +842,7 @@ header {
 }
 
 .project-modal-header {
+  flex-shrink: 0;
   max-width: 40rem;
   margin-bottom: 0.9rem;
 }
@@ -856,16 +860,18 @@ header {
 }
 
 .project-modal-stage {
+  flex: 1 1 auto;
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
   gap: 0.85rem;
+  min-height: 0;
 }
 
 .project-modal-slides {
   position: relative;
-  min-height: min(42vh, 380px);
-  max-height: min(50vh, 420px);
+  height: min(62vh, 560px);
+  min-height: 320px;
   border-radius: 22px;
   overflow: hidden;
   background: #112240;
@@ -876,15 +882,13 @@ header {
 }
 
 .project-modal-thumbs {
+  flex-shrink: 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 0.7rem;
   margin-top: 1rem;
-  padding-top: 0.25rem;
-  position: sticky;
-  bottom: 0;
-  background: #0a192f;
+  padding-top: 0.5rem;
 }
 
 .project-thumb {
@@ -1258,14 +1262,14 @@ header {
   }
 
   .project-modal {
-    padding: 0.75rem 0.5rem 1.25rem;
-    align-items: flex-start;
+    padding: 0.75rem;
+    align-items: center;
   }
 
   .project-modal-dialog {
     width: min(980px, calc(100vw - 1rem));
-    padding: 1rem 0.8rem 1.25rem;
-    margin-top: 0.5rem;
+    max-height: calc(100dvh - 1.5rem);
+    padding: 1rem 0.8rem;
   }
 
   .project-modal-stage {
@@ -1274,8 +1278,8 @@ header {
   }
 
   .project-modal-slides {
-    min-height: min(36vh, 280px);
-    max-height: min(42vh, 320px);
+    height: min(50vh, 420px);
+    min-height: 240px;
   }
 
   .project-modal-header h3 {
