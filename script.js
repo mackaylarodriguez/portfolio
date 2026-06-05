@@ -4,25 +4,25 @@ const projectData = [
   {
     title: "Mission Trip Management Portal",
     summary:
-      "Developed and deployed a full-stack web application for Let's Start Talking to manage participant applications, records, and workflows. Implemented authentication, database integration, and CRUD functionality for participant management, plus automated reporting and administrative workflows to improve data management and operational efficiency.",
-    tech: "JavaScript | Next.js | React | Supabase | SQL",
-    repo: "https://github.com/mackaylarodriguez",
+      "A full-stack web application for Let's Start Talking to manage participant applications, records, and workflows.",
+    tech: "JavaScript (Next.js, React, Supabase, SQL)",
+    repo: "https://github.com/mackaylarodriguez/lst-team-hub",
     slides: [
-      { label: "Participant Portal", className: "project-media-team" },
-      { label: "Application Records", className: "project-media-team-alt" },
-      { label: "Reporting Dashboard", className: "project-media-team-detail" }
+      { label: "My Trips", image: "projects/lst-team-hub/my-trips.png" },
+      { label: "Trip Overview", image: "projects/lst-team-hub/trip-overview.png" },
+      { label: "Staff Tasks", image: "projects/lst-team-hub/staff-tasks.png" }
     ]
   },
   {
     title: "IT Support Ticket Management System",
     summary:
-      "Designed and developed a full-stack web application to streamline issue tracking, ticket management, and support request workflows. Implemented user authentication, SQL Server database integration, and CRUD functionality for ticket creation, assignment, and status tracking, along with admin dashboards for filtering, reporting, and workflow management.",
-    tech: "C# | ASP.NET Core | SQL Server",
-    repo: "https://github.com/mackaylarodriguez",
+      "A full-stack IT help desk app for tracking support tickets with authentication, CRUD operations, and admin dashboards.",
+    tech: "C# (ASP.NET Core, SQL Server)",
+    repo: "https://github.com/mackaylarodriguez/ITSupportTicketSystem",
     slides: [
-      { label: "Ticket Dashboard", className: "project-media-ai" },
-      { label: "Admin Panel", className: "project-media-ai-alt" },
-      { label: "Workflow Management", className: "project-media-ai-detail" }
+      { label: "Ticket Dashboard", image: "projects/it-support/dashboard.png" },
+      { label: "Create Ticket", image: "projects/it-support/create-ticket.png" },
+      { label: "Edit Ticket", image: "projects/it-support/edit-ticket.png" }
     ]
   }
 ];
@@ -50,15 +50,30 @@ if (projectsRoot && projectModal) {
   let currentProjectIndex = 0;
   let gallerySlideIndex = 0;
 
+  const renderSlideMarkup = (slide, slideClass, isActive) => {
+    const activeClass = isActive ? " is-active" : "";
+
+    if (slide.image) {
+      return `
+        <div class="${slideClass} project-frame project-frame-image${activeClass}">
+          <img src="${slide.image}" alt="${slide.label}" loading="lazy" />
+          <span>${slide.label}</span>
+        </div>
+      `;
+    }
+
+    return `
+      <div class="${slideClass} project-frame ${slide.className}${activeClass}">
+        <span>${slide.label}</span>
+      </div>
+    `;
+  };
+
   const renderFeaturedProject = () => {
     const project = projectData[currentProjectIndex];
     const coverSlide = project.slides[0];
 
-    featuredSlides.innerHTML = `
-      <div class="featured-project-slide project-frame ${coverSlide.className} is-active">
-        <span>${coverSlide.label}</span>
-      </div>
-    `;
+    featuredSlides.innerHTML = renderSlideMarkup(coverSlide, "featured-project-slide", true);
 
     featuredTitle.textContent = project.title;
     featuredDescription.textContent = project.summary;
@@ -94,13 +109,7 @@ if (projectsRoot && projectModal) {
     galleryDescription.textContent = project.summary;
 
     gallerySlides.innerHTML = project.slides
-      .map(
-        (slide, index) => `
-          <div class="project-gallery-slide project-frame ${slide.className}${index === gallerySlideIndex ? " is-active" : ""}">
-            <span>${slide.label}</span>
-          </div>
-        `
-      )
+      .map((slide, index) => renderSlideMarkup(slide, "project-gallery-slide", index === gallerySlideIndex))
       .join("");
 
     galleryThumbs.innerHTML = project.slides
