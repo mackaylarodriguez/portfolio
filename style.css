@@ -803,13 +803,16 @@ header {
   position: fixed !important;
   inset: 0;
   z-index: 200;
-  display: grid;
-  place-items: center;
-  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 1.5rem 1rem 2rem;
 }
 
 .project-modal-backdrop {
-  position: absolute;
+  position: fixed;
   inset: 0;
   z-index: 0;
   border: 0;
@@ -821,7 +824,8 @@ header {
   position: relative;
   z-index: 2;
   width: min(920px, calc(100vw - 2rem));
-  padding: 1.25rem;
+  margin: auto 0;
+  padding: 1.25rem 1.25rem 1.5rem;
   border-radius: 26px;
   border: 1px solid rgba(100, 255, 218, 0.16);
   background: #0a192f;
@@ -1249,21 +1253,24 @@ header {
   }
 
   .project-modal {
-    padding: 1rem;
+    padding: 0.75rem 0.5rem 1.25rem;
+    align-items: flex-start;
   }
 
   .project-modal-dialog {
     width: min(980px, calc(100vw - 1rem));
-    padding: 1rem 0.8rem 1rem;
+    padding: 1rem 0.8rem 1.25rem;
+    margin-top: 0.5rem;
   }
 
   .project-modal-stage {
     gap: 0.5rem;
-    grid-template-columns: 40px minmax(0, 1fr) 40px;
+    grid-template-columns: 36px minmax(0, 1fr) 36px;
   }
 
   .project-modal-slides {
-    min-height: min(58vh, 420px);
+    min-height: min(36vh, 280px);
+    max-height: min(42vh, 320px);
   }
 
   .project-modal-header h3 {
