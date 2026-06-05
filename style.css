@@ -683,7 +683,7 @@ header {
 
 .featured-project-title {
   margin: 0;
-  color: #ffffff;
+  color: #ccd6f6;
   font-size: clamp(1.75rem, 3.5vw, 2.5rem);
   font-weight: 600;
   letter-spacing: 0.01em;
@@ -692,7 +692,7 @@ header {
 .featured-project-description {
   max-width: 34rem;
   margin: 0.65rem auto 0;
-  color: rgba(255, 255, 255, 0.92);
+  color: #ccd6f6;
   line-height: 1.55;
   font-size: 0.98rem;
   font-weight: 400;
@@ -700,7 +700,7 @@ header {
 
 .featured-project-tech {
   margin: 0.85rem 0 0;
-  color: rgba(255, 255, 255, 0.88);
+  color: #ccd6f6;
   font-size: 0.88rem;
   font-weight: 500;
   letter-spacing: 0.04em;
@@ -712,7 +712,7 @@ header {
   align-items: center;
   justify-content: center;
   margin-top: 1rem;
-  color: #ffffff;
+  color: #ccd6f6;
   text-decoration: none;
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
