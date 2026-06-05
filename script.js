@@ -2,39 +2,27 @@ console.log("Welcome to Mackayla's Portfolio!");
 
 const projectData = [
   {
-    title: "Escape Video Game",
+    title: "Mission Trip Management Portal",
     summary:
-      "Senior capstone dungeon crawler featuring procedural generation, multiplayer lobby support, and Agile sprint planning in Jira.",
-    tech: "C++ | Unreal Engine 5 | Jira",
+      "Developed and deployed a full-stack web application for Let's Start Talking to manage participant applications, records, and workflows. Implemented authentication, database integration, and CRUD functionality for participant management, plus automated reporting and administrative workflows to improve data management and operational efficiency.",
+    tech: "JavaScript | Next.js | React | Supabase | SQL",
     repo: "https://github.com/mackaylarodriguez",
     slides: [
-      { label: "Gameplay Demo", className: "project-media-game" },
-      { label: "Lobby Screen", className: "project-media-game-alt" },
-      { label: "Dungeon View", className: "project-media-game-detail" }
+      { label: "Participant Portal", className: "project-media-team" },
+      { label: "Application Records", className: "project-media-team-alt" },
+      { label: "Reporting Dashboard", className: "project-media-team-detail" }
     ]
   },
   {
-    title: "Team Hub Application",
+    title: "IT Support Ticket Management System",
     summary:
-      "Internal trip management dashboard for tracking sites, dates, workers, training progress, and trip tasks across multiple teams.",
-    tech: "Dashboard | Team Operations | Trip Management",
+      "Designed and developed a full-stack web application to streamline issue tracking, ticket management, and support request workflows. Implemented user authentication, SQL Server database integration, and CRUD functionality for ticket creation, assignment, and status tracking, along with admin dashboards for filtering, reporting, and workflow management.",
+    tech: "C# | ASP.NET Core | SQL Server",
     repo: "https://github.com/mackaylarodriguez",
     slides: [
-      { label: "Trip Dashboard", className: "project-media-team" },
-      { label: "Task Board", className: "project-media-team-alt" },
-      { label: "Team Tracking", className: "project-media-team-detail" }
-    ]
-  },
-  {
-    title: "Business Solutions Prototypes",
-    summary:
-      "End-to-end internship projects exploring automation, process improvement, and AI-supported workflows for practical business use cases.",
-    tech: "AI Solutions | Automation | Data Analysis",
-    repo: "https://github.com/mackaylarodriguez",
-    slides: [
-      { label: "AI Workflow Build", className: "project-media-ai" },
-      { label: "Automation Flow", className: "project-media-ai-alt" },
-      { label: "Project Output", className: "project-media-ai-detail" }
+      { label: "Ticket Dashboard", className: "project-media-ai" },
+      { label: "Admin Panel", className: "project-media-ai-alt" },
+      { label: "Workflow Management", className: "project-media-ai-detail" }
     ]
   }
 ];
