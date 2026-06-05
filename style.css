@@ -864,7 +864,8 @@ header {
 
 .project-modal-slides {
   position: relative;
-  min-height: min(72vh, 620px);
+  min-height: min(42vh, 380px);
+  max-height: min(50vh, 420px);
   border-radius: 22px;
   overflow: hidden;
   background: #112240;
@@ -880,6 +881,10 @@ header {
   flex-wrap: wrap;
   gap: 0.7rem;
   margin-top: 1rem;
+  padding-top: 0.25rem;
+  position: sticky;
+  bottom: 0;
+  background: #0a192f;
 }
 
 .project-thumb {
