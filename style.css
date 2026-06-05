@@ -463,6 +463,64 @@ header {
 }
 
 /* =========================
+   PROJECTS
+========================= */
+.projects-layer {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.project-card {
+  padding: 1.2rem;
+  border: 1px solid rgba(100, 255, 218, 0.2);
+  border-radius: 10px;
+  background: rgba(17, 34, 64, 0.4);
+}
+
+.project-card h3 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.2rem;
+  color: #64ffda;
+}
+
+.project-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.project-skills span {
+  border: 1px solid rgba(100, 255, 218, 0.4);
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  color: #64ffda;
+}
+
+.project-card ul {
+  margin: 0;
+  padding-left: 1rem;
+  color: #a8b2d1;
+  line-height: 1.6;
+}
+
+.project-card li {
+  margin-bottom: 0.5rem;
+}
+
+.project-card li:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================
    EXPERIENCE / PROJECTS / BADGES
 ========================= */
 #experience,
@@ -1196,5 +1254,9 @@ header {
 
   .project-modal-header h3 {
     font-size: 1.45rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
   }
 }
