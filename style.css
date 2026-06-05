@@ -147,11 +147,9 @@ header {
 }
 
 .section-lead,
-.muted,
 .degree,
 .timeline ul,
 .project-body p,
-.cert-copy p,
 .about p {
   color: #a8b2d1;
 }
