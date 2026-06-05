@@ -17,7 +17,7 @@ const projectData = [
   {
     title: "IT Support Ticket Management System",
     summary:
-      "A full-stack IT help desk app for tracking support tickets with authentication, CRUD operations, and admin dashboards.",
+      "A full-stack IT help desk app for tracking support tickets with authentication and CRUD operations.",
     tech: "C# (ASP.NET Core, SQL Server)",
     repo: "https://github.com/mackaylarodriguez/ITSupportTicketSystem",
     cover: "projects/it-support/cover.png",
