@@ -640,6 +640,25 @@ header {
   object-position: top center;
 }
 
+.project-gallery-slide.project-frame-image {
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.project-gallery-slide.project-frame-image img {
+  object-fit: contain;
+  object-position: center center;
+}
+
+.project-gallery-slide.project-frame-image::before {
+  background: rgba(17, 34, 64, 0.92);
+}
+
+.project-gallery-slide span {
+  display: none;
+}
+
 .project-frame-image::before {
   background: linear-gradient(180deg, rgba(10, 25, 47, 0.05) 35%, rgba(10, 25, 47, 0.92) 100%);
 }
@@ -832,14 +851,14 @@ header {
 
 .project-modal-slides {
   position: relative;
-  min-height: 500px;
+  min-height: min(72vh, 620px);
   border-radius: 22px;
   overflow: hidden;
   background: #112240;
 }
 
 .project-gallery-slide {
-  padding: 1.35rem;
+  padding: 0;
 }
 
 .project-modal-thumbs {
@@ -1235,7 +1254,7 @@ header {
   }
 
   .project-modal-slides {
-    min-height: 320px;
+    min-height: min(58vh, 420px);
   }
 
   .project-modal-header h3 {
