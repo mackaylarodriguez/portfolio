@@ -674,61 +674,63 @@ header {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  padding: 0 2rem 2rem;
+  padding: 0 1.5rem 1.25rem;
   background: linear-gradient(180deg, rgba(10, 25, 47, 0) 35%, rgba(10, 25, 47, 0.72) 70%, rgba(10, 25, 47, 0.96) 100%);
   pointer-events: none;
 }
 
 .featured-project-copy {
-  width: min(42rem, 100%);
-  padding: 1.35rem 1.75rem 1.5rem;
+  width: min(22rem, 88%);
+  padding: 0.65rem 1rem 0.75rem;
   text-align: center;
   pointer-events: auto;
-  border-radius: 14px;
+  border-radius: 10px;
   background: rgba(10, 25, 47, 0.88);
   border: 1px solid rgba(100, 255, 218, 0.14);
-  box-shadow: 0 12px 32px rgba(4, 12, 24, 0.35);
+  box-shadow: 0 8px 20px rgba(4, 12, 24, 0.35);
 }
 
 .featured-project-title {
   margin: 0;
   color: #ccd6f6;
-  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-size: clamp(0.95rem, 2vw, 1.2rem);
   font-weight: 600;
   letter-spacing: 0.01em;
+  line-height: 1.25;
 }
 
 .featured-project-description {
-  max-width: 34rem;
-  margin: 0.65rem auto 0;
+  max-width: 20rem;
+  margin: 0.35rem auto 0;
   color: #ccd6f6;
-  line-height: 1.55;
-  font-size: 0.98rem;
+  line-height: 1.45;
+  font-size: 0.72rem;
   font-weight: 400;
 }
 
 .featured-project-tech {
-  margin: 0.85rem 0 0;
+  margin: 0.4rem 0 0;
   color: #ccd6f6;
-  font-size: 0.88rem;
+  font-size: 0.62rem;
   font-weight: 500;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  line-height: 1.35;
 }
 
 .featured-project-github {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 0.45rem;
   color: #ccd6f6;
   text-decoration: none;
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .featured-project-github svg {
-  width: 1.35rem;
-  height: 1.35rem;
+  width: 0.95rem;
+  height: 0.95rem;
 }
 
 .featured-project-github:hover {
@@ -1244,7 +1246,12 @@ header {
   }
 
   .featured-project-overlay {
-    padding: 0 1.25rem 2rem;
+    padding: 0 1rem 1rem;
+  }
+
+  .featured-project-copy {
+    width: min(20rem, 92%);
+    padding: 0.55rem 0.85rem 0.65rem;
   }
 
   .featured-project-shell {
