@@ -2,7 +2,7 @@ console.log("Welcome to Mackayla's Portfolio!");
 
 const projectData = [
   {
-    title: "Mission Trip Management Portal",
+    title: "LST Team Hub",
     summary:
       "A full-stack web application for Let's Start Talking to manage participant applications, records, and workflows.",
     tech: "JavaScript (Next.js, React, Supabase, SQL)",
