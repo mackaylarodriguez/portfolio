@@ -15,6 +15,19 @@ const projectData = [
     ]
   },
   {
+    title: "Tech Community",
+    summary:
+      "A community resource board for The Knowledge House fellows to browse, filter, and share tech opportunities and resources in one place.",
+    tech: "JavaScript (Next.js, React, Node.js, Express, PostgreSQL, Supabase)",
+    repo: "https://github.com/mackaylarodriguez/tech-community",
+    cover: "projects/tech-community/cover.png",
+    slides: [
+      { label: "Browse & Filter", image: "projects/tech-community/home.png" },
+      { label: "Opportunity Details", image: "projects/tech-community/detail-modal.png" },
+      { label: "Add Opportunity", image: "projects/tech-community/add-form.png" }
+    ]
+  },
+  {
     title: "IT Support Ticket Management System",
     summary:
       "A full-stack IT help desk app for tracking support tickets with authentication and CRUD operations.",
