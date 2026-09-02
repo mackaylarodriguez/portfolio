@@ -2,19 +2,6 @@ console.log("Welcome to Mackayla's Portfolio!");
 
 const projectData = [
   {
-    title: "Content Production Agent",
-    summary:
-      "A multi-agent content production workflow for Fieldstone Media that keeps researcher, writer, and editor as separate agents, with a human checkpoint before anything publishes.",
-    tech: "Python (LangChain, DeepSeek, DuckDuckGo Search)",
-    repo: "https://github.com/kellieoquinn-idir/Content-Production-Agent",
-    cover: "projects/content-production-agent/cover.svg",
-    slides: [
-      { label: "Agent Pipeline", image: "projects/content-production-agent/cover.svg" },
-      { label: "Integration Layer", image: "projects/content-production-agent/integration.svg?v=2" },
-      { label: "Human Editor Gate", image: "projects/content-production-agent/gate.svg" }
-    ]
-  },
-  {
     title: "LST Team Hub",
     summary:
       "A full-stack web application for Let's Start Talking to manage participant applications, records, and workflows.",
@@ -25,6 +12,19 @@ const projectData = [
       { label: "My Trips", image: "projects/lst-team-hub/my-trips.png" },
       { label: "Trip Overview", image: "projects/lst-team-hub/trip-overview.png" },
       { label: "Staff Tasks", image: "projects/lst-team-hub/staff-tasks.png" }
+    ]
+  },
+  {
+    title: "Content Production Agent",
+    summary:
+      "A multi-agent content production workflow for Fieldstone Media that keeps researcher, writer, and editor as separate agents, with a human checkpoint before anything publishes.",
+    tech: "Python (LangChain, DeepSeek, DuckDuckGo Search)",
+    repo: "https://github.com/kellieoquinn-idir/Content-Production-Agent",
+    cover: "projects/content-production-agent/cover.svg",
+    slides: [
+      { label: "Agent Pipeline", image: "projects/content-production-agent/cover.svg" },
+      { label: "Integration Layer", image: "projects/content-production-agent/integration.svg?v=2" },
+      { label: "Human Editor Gate", image: "projects/content-production-agent/gate.svg" }
     ]
   },
   {
