@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Content Production Agent pipeline">
+  <rect width="1600" height="900" fill="#0a192f"/>
+  <circle cx="180" cy="140" r="220" fill="#64ffda" opacity="0.06"/>
+  <circle cx="1420" cy="760" r="260" fill="#64ffda" opacity="0.05"/>
+  <text x="80" y="80" fill="#64ffda" font-family="Source Code Pro, ui-monospace, monospace" font-size="22">multi-agent workflow</text>
+  <text x="80" y="140" fill="#ccd6f6" font-family="Source Code Pro, ui-monospace, monospace" font-size="52" font-weight="700">Content Production Agent</text>
+  <text x="80" y="188" fill="#8892b0" font-family="Source Code Pro, ui-monospace, monospace" font-size="22">Researcher to Writer to Editor, with a person before publish</text>
+
+  <g font-family="Source Code Pro, ui-monospace, monospace">
+    <rect x="80" y="250" rx="18" width="250" height="150" fill="#112240" stroke="#64ffda" stroke-opacity="0.45"/>
+    <text x="205" y="315" text-anchor="middle" fill="#64ffda" font-size="18">01</text>
+    <text x="205" y="355" text-anchor="middle" fill="#dbe5f1" font-size="24" font-weight="700">Researcher</text>
+    <text x="205" y="390" text-anchor="middle" fill="#8892b0" font-size="16">search_sources</text>
+
+    <path d="M345 325 H430" stroke="#64ffda" stroke-width="3" fill="none"/>
+    <polygon points="430,318 448,325 430,332" fill="#64ffda"/>
+
+    <rect x="460" y="250" rx="18" width="250" height="150" fill="#112240" stroke="#64ffda" stroke-opacity="0.45"/>
+    <text x="585" y="315" text-anchor="middle" fill="#64ffda" font-size="18">02</text>
+    <text x="585" y="355" text-anchor="middle" fill="#dbe5f1" font-size="24" font-weight="700">Writer</text>
+    <text x="585" y="390" text-anchor="middle" fill="#8892b0" font-size="16">draft from brief</text>
+
+    <path d="M725 325 H810" stroke="#64ffda" stroke-width="3" fill="none"/>
+    <polygon points="810,318 828,325 810,332" fill="#64ffda"/>
+
+    <rect x="840" y="250" rx="18" width="250" height="150" fill="#112240" stroke="#64ffda" stroke-opacity="0.45"/>
+    <text x="965" y="315" text-anchor="middle" fill="#64ffda" font-size="18">03</text>
+    <text x="965" y="355" text-anchor="middle" fill="#dbe5f1" font-size="24" font-weight="700">Editor</text>
+    <text x="965" y="390" text-anchor="middle" fill="#8892b0" font-size="16">PASS or REVISE</text>
+
+    <path d="M1105 325 H1190" stroke="#64ffda" stroke-width="3" fill="none"/>
+    <polygon points="1190,318 1208,325 1190,332" fill="#64ffda"/>
+
+    <rect x="1220" y="250" rx="18" width="300" height="150" fill="rgba(100,255,218,0.08)" stroke="#64ffda"/>
+    <text x="1370" y="315" text-anchor="middle" fill="#64ffda" font-size="18">gate</text>
+    <text x="1370" y="355" text-anchor="middle" fill="#dbe5f1" font-size="22" font-weight="700">Human Editor</text>
+    <text x="1370" y="390" text-anchor="middle" fill="#8892b0" font-size="16">nothing auto-publishes</text>
+  </g>
+</svg>

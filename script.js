@@ -2,6 +2,19 @@ console.log("Welcome to Mackayla's Portfolio!");
 
 const projectData = [
   {
+    title: "Content Production Agent",
+    summary:
+      "A multi-agent content production workflow for Fieldstone Media that keeps researcher, writer, and editor as separate agents, with a human checkpoint before anything publishes.",
+    tech: "Python (LangChain, DeepSeek, DuckDuckGo Search)",
+    repo: "https://github.com/kellieoquinn-idir/Content-Production-Agent",
+    cover: "projects/content-production-agent/cover.svg",
+    slides: [
+      { label: "Agent Pipeline", image: "projects/content-production-agent/cover.svg" },
+      { label: "Integration Layer", image: "projects/content-production-agent/integration.svg" },
+      { label: "Human Editor Gate", image: "projects/content-production-agent/gate.svg" }
+    ]
+  },
+  {
     title: "LST Team Hub",
     summary:
       "A full-stack web application for Let's Start Talking to manage participant applications, records, and workflows.",
