@@ -644,7 +644,7 @@ header {
   object-position: top center;
 }
 
-.project-frame-image img[src$=".svg"] {
+.project-frame-image img[src*=".svg"] {
   object-fit: contain;
   object-position: center center;
   background: #0a192f;

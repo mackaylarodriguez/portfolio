@@ -10,7 +10,7 @@ const projectData = [
     cover: "projects/content-production-agent/cover.svg",
     slides: [
       { label: "Agent Pipeline", image: "projects/content-production-agent/cover.svg" },
-      { label: "Integration Layer", image: "projects/content-production-agent/integration.svg" },
+      { label: "Integration Layer", image: "projects/content-production-agent/integration.svg?v=2" },
       { label: "Human Editor Gate", image: "projects/content-production-agent/gate.svg" }
     ]
   },
